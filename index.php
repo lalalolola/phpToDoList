@@ -85,7 +85,7 @@ $tasks = [
                     <ul class="main-navigation__list">
                         <?php foreach($projects as $project): ?>
                         <li class="main-navigation__list-item">
-                            <a class="main-navigation__list-item-link" href="#"><?= $project ?></a>
+                            <a class="main-navigation__list-item-link" href="#"><?= $project; ?></a>
                             <span class="main-navigation__list-item-count">0</span>
                         </li>
                         <?php endforeach; ?>
@@ -114,7 +114,7 @@ $tasks = [
                     </nav>
 
                     <label class="checkbox">
-                        <input class="checkbox__input visually-hidden show_completed" type="checkbox" <?php if ($show_complete_tasks) : ?>checked<?php endif ; ?>>
+                        <input class="checkbox__input visually-hidden show_completed" type="checkbox" <?php if ($show_complete_tasks): ?>checked<?php endif; ?>>
                         <span class="checkbox__text">Показывать выполненные</span>
                     </label>
                 </div>
@@ -128,7 +128,7 @@ $tasks = [
                             <td class="task__select">
                                 <label class="checkbox task__checkbox">
                                     <input class="checkbox__input visually-hidden" type="checkbox" value="1">
-                                    <span class="checkbox__text"><?= $task['title'] ?></span>
+                                    <span class="checkbox__text"><?= $task['title']; ?></span>
                                 </label>
                             </td>
 
@@ -136,7 +136,7 @@ $tasks = [
                                 <a class="download-link" href="#">Home.psd</a>
                             </td>
 
-                            <td class="task__date"><?= $task['date-done'] ?></td>
+                            <td class="task__date"><?= $task['date-done']; ?></td>
                         </tr>
                     <?php endforeach; ?>
                 </table>
